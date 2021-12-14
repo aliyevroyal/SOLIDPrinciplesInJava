@@ -10,16 +10,16 @@ public class LiskovSubstitutionPrinciple {
     public static class FirstSubClass extends SuperClass {
         @Override
         public void does() {
-            System.out.println("This method does the first task.");
             super.does();
+            System.out.println("This method does the first task.");
         }
     }
 
     public static class SecondSubClass extends SuperClass {
         @Override
         public void does() {
-            System.out.println("This method does the second task.");
             super.does();
+            System.out.println("This method does the second task.");
         }
     }
 
@@ -33,7 +33,9 @@ public class LiskovSubstitutionPrinciple {
             SecondSubClass secondSubClass = new SecondSubClass();
 
             giveTask(firstSubClass);
+            firstSubClass.does();
             giveTask(secondSubClass);
+            secondSubClass.does();
         }
     }
 }
